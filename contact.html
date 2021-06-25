@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="IMG/fav.png" type="image/x-icon">
+    <title>Contact - Parallax Animation</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style5.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fw-bold" id="main">
+            <div class="container" id="menu">
+                <a class="navbar-brand fs-2 fw-bold" id="nav-brand" href="contact.html">CONTACT</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#NAV">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="NAV">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link ms-2" id="nav-a" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link ms-2" id="nav-a" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link ms-2" id="nav-a" href="work.html">WORK</a></li>
+                        <li class="nav-item"><a class="nav-link ms-2" id="nav-a" href="service.html">SERVICE</a></li>
+                        <li class="nav-item"><a class="nav-link ms-2" id="nav-a" href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container-fluid" id="sect1">
+            <img class="img-fluid IMG" id="stars" src="IMG/stars3.png" alt="">
+            <img class="img-fluid IMG" id="moon" src="IMG/moon2.png" alt="">
+            <img class="img-fluid IMG" id="mountains_behind" src="IMG/mountains_behind.png" alt="">
+            <h2 class="text-light display-1" id="text">Anime<span class="fw-bold">JS</span></h2>
+            <a class="btn bg-light px-4 fw-bold rounded-pill mt-3" id="play-btn" href="">PLAY</a>
+            <img class="img-fluid IMG" id="mountains_front" src="IMG/mountains_front.png" alt="">
+        </div>
+    </section>
+
+    <footer class="bg-dark">
+        <div class="container">
+            <p class="text-center text-light fw-bold my-auto py-3">CopyRight: &copy; All rights preserved to Newaz</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <script src="JS/anime.min.js"></script>
+    <script>
+        var animation = anime.timeline({
+            
+        });
+
+        animation
+        .add({
+            targets: '#play-btn',
+            top: '1500px',
+            duration: 500,
+            easing: 'easeInOutSine'
+        })
+
+        .add({
+            targets: '#stars',
+            top: '0px',
+            duration: 1000,
+            easing: 'easeInOutSine'
+        })
+
+        .add({
+            targets: '#mountains_behind',
+            bottom: '0px',
+            duration: 1000,
+            easing: 'easeInOutSine'
+        })
+
+        .add({
+            targets: '#moon',
+            top: '0px',
+            duration: 1000,
+            easing: 'easeInOutBack'
+        })
+
+        .add({
+            targets: '#mountains_front',
+            bottom: '0px',
+            duration: 1000,
+            easing: 'easeInOutSine'
+        })
+
+        .add({
+            targets: '#text',
+            marginRight: 0,
+            duration: 1000,
+            easing: 'easeInOutBack'
+        })
+
+        .add({
+            targets: '#play-btn',
+            top: '50%',
+            duration: 500,
+            easing: 'easeInOutBack'
+        })
+
+        document.querySelector('#play-btn').onclick = animation.play;
+    </script>
+
+</body>
