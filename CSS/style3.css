@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--white);
+}
+#nav-a{
+    color: var(--black);
+    font-weight: 500;
+}
+:root{
+    --black: #333;
+    --green: #017143;
+    --white: #fff;
+    --white2: #fff;
+    --black2: #333; 
+}
+.dark{
+    --black: #fff;
+    --white: #113828;
+    --black2: #124e36;
+}
+#main{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu{
+    position: absolute;
+    top: 10px;
+    z-index: 10000;
+}
+#themeswitch{
+    width: 40px;
+    height: 40px;
+    background: var(--black);
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#themeswitch::before{
+    content: '\f186';
+    font-family: "Font Awesome 5 Free";
+    color: var(--white);
+    font-size: 20px;
+}
+#themeswitch.active::before{
+    content: '\f185';
+    
+}
+#headln{
+    color: var(--black);
+}
+#sp-text{
+    color: var(--green);
+}
+.dark #sp-text{
+    color: #00ff9b;
+}
+#passage{
+    color: var(--black);
+}
+#demo-btn{
+    background: var(--green);
+    border-radius: 20px;
+}
+.sect-1{
+    margin-top: 10%;
+    min-height: 100vh;
+}
+#img-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img-box::before{
+    content: '';
+    background: var(--green);
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+#IMG{
+    z-index: 1;
+    position: relative;
+}
+#icon{
+    background: var(--black);
+    color: var(--white);
+    font-size: 1.2em;
+}
+#icon:hover{
+    background: var(--green);
+}
+@media(max-width: 600px){
+    #menu{
+        top: 0;
+        text-align: center;   
+    }
+    #NAV{
+        background: var(--green);
+    }
+    #nav-a{
+        color: var(--white);
+    }
+    .sect-1{
+        margin-top: 30%;
+    }
+    #img-box{
+        margin-top: 20%;
+    }
+    #themeswitch{
+        left: 50%;
+    }
+}

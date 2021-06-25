@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+#nav-brand{
+    color: #ff5e8e;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+@keyframes slide_left{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+#nav-a{
+    color: #0169b2;
+    padding: 8px 18px;
+    border-radius: 30px;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+@keyframes slide_top{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+#nav-a:hover{
+    color: #fff;
+    background: #0169b2;
+}
+#nav-activate{
+    color: #fff;
+    background: #0169b2;
+    padding: 8px 18px;
+    border-radius: 30px;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+#HdLn{
+    color: #0169b2;
+    font-weight: 500;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+@keyframes slide_right{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+#para{
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 1.75s;
+    opacity: 0;
+}
+#butn{
+    background: #ff5e8e;
+    padding: 8px 18px;
+    border-radius: 30px;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+#icon{
+    background: #0169b2; 
+}
+#icon:hover{
+    transform: translateY(-20px);
+    background: #ff5e8e;
+}
+#parent{
+    animation: slide_btn 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+    /*Do not use animation and hover to thge same element it's overright one another. Use different div hover and different div or element hover*/
+}
+@keyframes slide_btn{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 110;
+}
+#Img{
+    position: absolute;
+    object-fit: cover;
+    top: 150px;
+    right: 0;
+    max-width: 700px;
+    z-index: 90;
+    opacity: 0;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 3.4s;
+}
+@keyframes fade_in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+footer{
+    z-index: 100;
+}
+#sect1{
+    height: 80vh;
+}
+#textdv{
+    z-index: 100;
+}
+@media(max-width: 600px){
+    #Img{
+        max-width: 300px;
+        top: 200px;
+        opacity: 0.5 !important;
+    }
+    #sect1{
+        height: 50vh;
+    }
+    #main{
+        background: #fff;
+        text-align: center;
+    }
+}
