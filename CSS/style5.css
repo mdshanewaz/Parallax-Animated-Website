@@ -22,7 +22,7 @@ body{
     z-index: 10000;
 }
 #sect1{
-    height: 100vh;
+    height: 120vh;
     position: relative;
     display: flex;
     align-items: center;
